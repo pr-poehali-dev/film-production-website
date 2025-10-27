@@ -59,28 +59,46 @@ const Index = () => {
 
   const equipment = [
     {
-      name: 'Камера ARRI ALEXA',
+      name: 'Кинокамера',
       category: 'Оборудование',
-      description: 'Профессиональная цифровая кинокамера',
+      description: 'Именно она фиксирует изображение, которое затем будет показано зрителю. Современные кинокамеры — это высокотехнологичные устройства, способные снимать видео в разрешении, значительно превышающем HD, и предлагающие кинематографистам беспрецедентный контроль над изображением.',
       icon: 'Video'
     },
     {
-      name: 'Объективы Prime',
+      name: 'Фикс-объективы',
       category: 'Оборудование',
-      description: 'Фиксированные объективы для кинематографии',
+      description: 'Объективы с фиксированным фокусным расстоянием.',
       icon: 'Focus'
     },
     {
-      name: 'Steadicam',
+      name: 'Зум-объективы',
       category: 'Оборудование',
-      description: 'Стабилизатор для плавной операторской работы',
-      icon: 'Move'
+      description: 'Объективы с переменным фокусным расстоянием.',
+      icon: 'ZoomIn'
     },
     {
-      name: 'Светодиодные панели',
+      name: 'Анаморфотные объективы',
       category: 'Оборудование',
-      description: 'Современное осветительное оборудование',
+      description: 'Создают характерные овальные блики и широкоэкранное изображение с эффектом «растянутой» перспективы.',
+      icon: 'Aperture'
+    },
+    {
+      name: 'HMI-лампы',
+      category: 'Оборудование',
+      description: 'Мощные источники холодного света, имитирующие дневной свет.',
+      icon: 'Sun'
+    },
+    {
+      name: 'LED-панели',
+      category: 'Оборудование',
+      description: 'Современные, энергоэффективные и компактные источники света, позволяющие регулировать цветовую температуру и яркость.',
       icon: 'Lamp'
+    },
+    {
+      name: 'Флуоресцентные лампы',
+      category: 'Оборудование',
+      description: 'Используются для мягкого, рассеянного освещения.',
+      icon: 'Lightbulb'
     }
   ];
 
@@ -110,7 +128,7 @@ const Index = () => {
       >
         <div className="text-center space-y-6 px-4 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold text-gold glow-gold tracking-wider">
-            СПЕЦИАЛЬНОСТИ В КИНО
+            СПЕЦИАЛЬНОСТИ И ОБОРУДОВАНИЕ В КИНО
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto font-light">
             Откройте для себя профессии, которые создают магию кинематографа
@@ -180,7 +198,7 @@ const Index = () => {
                   <h2 className="text-4xl font-bold text-gold text-center mb-12 glow-gold">
                     ПРОФЕССИОНАЛЬНОЕ ОБОРУДОВАНИЕ
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {equipment.map((item, index) => (
                       <Card 
                         key={index}
